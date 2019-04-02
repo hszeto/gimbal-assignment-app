@@ -1,14 +1,14 @@
 {
   "expo": {
     "name": "LA Cafe app",
-    "slug": "la-cafes-app",
+    "slug": "gimbal-assignment-app",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
       "ios",
       "android"
     ],
-    "version": "1.0.2",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./deployment/img/icon_coffee_512.png",
     "splash": {
@@ -27,7 +27,7 @@
     },
     "android": {
       "package": "com.gimbal_assignment.app",
-      "versionCode": 2,
+      "versionCode": 3,
       "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"]
     }
   }

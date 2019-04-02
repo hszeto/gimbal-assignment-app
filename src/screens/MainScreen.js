@@ -3,7 +3,7 @@ import { Platform, StyleSheet, Text, View } from 'react-native';
 import { Constants, Location, Permissions } from 'expo';
 
 import MainMap from '../components/MainMap';
-import { postCafes } from '../services/fetchApi';
+import { getCafes } from '../services/fetchApi';
 
 export default class MainScreen extends React.Component {
   state = {
@@ -48,7 +48,7 @@ export default class MainScreen extends React.Component {
   fetchCafes = async () => {
     const { latitude, longitude } = this.state.region;
 
-    const cafes = await postCafes({
+    const cafes = await getCafes({
       lat: latitude,
       lon: longitude
     })

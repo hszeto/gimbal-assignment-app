@@ -1,14 +1,13 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://gimbal-assignment.herokuapp.com',
-  headers: { 'Content-Type': 'application/json' }
+  baseURL: 'https://gimbal-assignment.herokuapp.com'
 });
 
-export const postCafes = userLocation => {
+export const getCafes = userLocation => {
   return api
-    .post('/api/nearby', {
-      location: userLocation
+    .get('/api/nearby', {
+      params: { ...userLocation }
     })
     .then(res =>
       res.data.cafes.map(cafe => {
